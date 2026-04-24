@@ -62,9 +62,8 @@ app.post('/processar-quiz', (req, res) => {
     });
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`🚀 SERVIDOR RODANDO!`);
-    console.log(`Acesse: http://localhost:${PORT}`);
+    console.log(`🚀 SERVIDOR RODANDO NA PORTA ${PORT}!`);
     console.log(`Aguardando jogadores...`);
 });
